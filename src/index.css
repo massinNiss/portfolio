@@ -1,0 +1,232 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Digital Transformation & AI Theme */
+
+@layer base {
+  :root {
+    /* Base colors - dark theme with cyber accents */
+    --background: 220 15% 6%;
+    --foreground: 210 30% 95%;
+    
+    /* Cards and surfaces */
+    --card: 220 15% 8%;
+    --card-foreground: 210 25% 92%;
+    
+    /* Interactive elements */
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 25% 92%;
+    
+    /* Brand colors - cyber red and electric blue */
+    --primary: 0 84% 60%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 100% 65%;
+    --secondary-foreground: 220 15% 6%;
+    
+    /* Muted elements */
+    --muted: 220 15% 12%;
+    --muted-foreground: 210 15% 65%;
+    
+    /* Accent colors */
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 15% 6%;
+    
+    /* Status colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Borders and inputs */
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 0 84% 60%;
+  }
+
+  .light {
+    /* Light theme variables - Classic Professional Theme */
+    --background: 0 0 100;
+    --foreground: 222 84 4;
+    --card: 0 0 100;
+    --card-foreground: 222 84 4;
+    --popover: 0 0 100;
+    --popover-foreground: 222 84 4;
+    --primary: 222 47 11;
+    --primary-foreground: 210 40 98;
+    --secondary: 210 40 98;
+    --secondary-foreground: 222 47 11;
+    --muted: 210 40 98;
+    --muted-foreground: 215 25 27;
+    --accent: 210 40 98;
+    --accent-foreground: 222 47 11;
+    --destructive: 0 84 60;
+    --destructive-foreground: 210 40 98;
+    --border: 214 32 91;
+    --input: 214 32 91;
+    --ring: 222 47 11;
+    
+    /* Light theme gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(222 47% 11%), hsl(222 47% 21%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 40% 98%), hsl(214 32% 91%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 40% 98%) 0%, hsl(214 32% 91%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(214 32% 96%) 100%);
+    
+    /* Light theme shadows */
+    --shadow-glow-primary: 0 0 30px hsl(222 47% 11% / 0.3);
+    --shadow-glow-secondary: 0 0 30px hsl(222 47% 11% / 0.2);
+    --shadow-card: 0 4px 20px hsl(222 47% 11% / 0.1);
+  }
+  
+  /* Dark theme fallback - this is the default for :root */
+  .dark {
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(280 100% 70%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(210 100% 65%) 0%, hsl(180 100% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 6%) 0%, hsl(220 25% 8%) 50%, hsl(220 15% 6%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 15% 8% / 0.8) 0%, hsl(220 15% 12% / 0.6) 100%);
+    
+    /* Shadows with glow effects */
+    --shadow-glow-primary: 0 0 20px hsl(0 84% 60% / 0.3);
+    --shadow-glow-secondary: 0 0 20px hsl(210 100% 65% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 15% 4% / 0.4);
+  }
+  
+  /* Shared variables for all themes */
+  :root, .light, .dark {
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Animation and transition variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Typography weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Spacing for consistent layout */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  /* Glowing text effect */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  /* Animated gradient background */
+  .bg-gradient-animated {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+  }
+  
+  /* Card with hover glow effect */
+  .card-glow {
+    transition: var(--transition-smooth);
+    background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .card-glow:hover {
+    box-shadow: var(--shadow-glow-primary), var(--shadow-card);
+    transform: translateY(-4px);
+  }
+  
+  /* Floating animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Pulse glow animation */
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+    }
+  }
+  
+  /* Typing animation for text */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+}
