@@ -1,19 +1,18 @@
-# Spark Transformation Bot Portfolio
+# Portfolio
 
-A modern, interactive portfolio for Massine Niharmine, Digital Transformation & AI Engineer.
+A modern, interactive portfolio, Digital Transformation & AI Engineer.
 
 ## 🚀 Features
-- Hero section with animated name and introduction
 - Experience, projects, and skills sections
 - Downloadable resume
-- Contact form (ready for integration with Formspree, EmailJS, or your backend)
+- Contact form
 - Chatbot widget (integrates with a Python FastAPI backend for RAG/AI)
 - Theme toggle (light/dark)
 - Responsive and mobile-friendly
 
 ## 🗂️ Project Structure
 ```
-spark-transformation-bot-main/
+portfolio/
 ├── public/                # Static assets (resume, icons, etc.)
 ├── src/
 │   ├── assets/            # Images
@@ -36,8 +35,8 @@ spark-transformation-bot-main/
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/yourusername/your-repo-name.git
-cd spark-transformation-bot-main
+git clone https://github.com/massinniss/portfolio.git
+cd portfolio
 ```
 
 ### 2. Install Frontend Dependencies
@@ -115,4 +114,4 @@ This project is for personal/portfolio use. Feel free to fork and adapt for your
 ---
 
 **Questions or need help?**
-Open an issue or contact Massine Niharmine via the portfolio contact form or social links.
+Open an issue or contact me via the portfolio contact form or social links.
