@@ -3,7 +3,7 @@
   "private": true,
   "version": "7.7.7",
   "type": "module",
-  "homepage": "https://massinniss.github.io/My-portfolio/",
+  "homepage": "https://massinniss.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -3,9 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "msn-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/My-portfolio/", // Set base for GitHub Pages
+  base: process.env.VITE_BASE_PATH || "/portfolio",
   server: {
     host: "::",
     port: 8080,
